@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import User, Reservation, Terrain, Type
+from .models import User, Reservation, Terrain, Type, Team
 
 class UserAdmin(admin.ModelAdmin):
 
@@ -22,7 +22,13 @@ class TypeAdmin(admin.ModelAdmin):
     list_display = ('name',)
         
 
+class TeamAdmin(admin.ModelAdmin):
+
+    list_display = ('name','type','number_player')
+    
+
 admin.site.register(User, UserAdmin)
 admin.site.register(Reservation, ReservationAdmin)
 admin.site.register(Terrain, TerrainAdmin)
 admin.site.register(Type, TypeAdmin)
+admin.site.register(Team, TeamAdmin)
