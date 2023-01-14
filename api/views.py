@@ -31,5 +31,10 @@ class ReservationViewset(ModelViewSet):
     serializer_class = ReservationSerializer
      
     def get_queryset(self):
-        return Reservation.objects.all()
+        queryset = Reservation.objects.filter(status=True)
+        
+        user_id = self.request.GET.get('user_id')
+        if user_id is not None:
+            queryset = queryset.filter(user_id=user_id)
+        return queryset
     
