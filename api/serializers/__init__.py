@@ -1,2 +1,5 @@
 from .user_serializers import UserSerializer
 from .reservation_serializers import ReservationSerializer
+from .team_serializers import TeamSerializer
+from .terrain_serializers import TerainSerializer
+from .type_serializers import TypeSerializer

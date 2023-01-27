@@ -6,6 +6,8 @@ class Terrain(models.Model):
     size = models.IntegerField()
     adresse = models.CharField(max_length=50)
     capacity = models.IntegerField()
+    price = models.IntegerField()
+    image = models.URLField(max_length=200)
     
     #FK Type
     

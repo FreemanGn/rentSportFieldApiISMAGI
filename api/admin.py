@@ -15,11 +15,11 @@ class ReservationAdmin(admin.ModelAdmin):
     
 class TerrainAdmin(admin.ModelAdmin):
 
-    list_display = ('name', 'type', 'size', 'adresse', 'capacity')
+    list_display = ('name', 'type','price','size', 'adresse', 'capacity','image')
 
 class TypeAdmin(admin.ModelAdmin):
 
-    list_display = ('name',)
+    list_display = ('name','image')
         
 
 class TeamAdmin(admin.ModelAdmin):
